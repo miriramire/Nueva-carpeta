@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pagina de soporte</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse bg-primary">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="#">Soporte Tecnico</a>
+		    </div>
+    		<ul class="nav navbar-nav">
+      			<li class="active"><a href="#inicio">Incio <span class="glyphicon glyphicon-home"></span></a></li>
+   				<li><a href="#navegacion">Navegacion <span class="glyphicon glyphicon-cloud-download"></span></a></li>
+   			    <li><a href="#llamadas">Llamadas <span class="glyphicon glyphicon-earphone"></span></a></li>
+      			<li><a href="#">Mensajes <span class="glyphicon glyphicon-envelope"></span></a></li>
+    		</ul>
+  		</div>
+	</nav>
+    <!-- First Grid: Inicio -->
+    <div class="container-fluid" id="inicio">
+    	<div class="panel-group">
+    		<div class="panel panel-primary">
+            	<div class="panel-heading">General</div>
+      				<div class="panel-body">
+                    	<p>El soporte técnico o asistencia técnica es un rango de servicios por medio del cual se proporciona asistencia a los usuarios al tener algún problema al utilizar un producto o servicio.</p>
+                        <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="datos">Datos</label>
+                              <input type="text" class="form-control" id="datos" placeholder="Inserte valor">
+                              <select class="form-control" id="conversionDatos" name="conversionDatos">
+                                <option value="" disabled selected>Seleccione una opcion</option>
+                                <option value="kilomegas">de Kilo a Megas</option>
+                                <option value="megagiga">de Megas a Gigas</option>
+                                <option value="gigamega">de Gigas a Megas</option>
+                                <option value="megakilo">de Megas a Kilo</option>
+                                <option value="kilogiga">de Kilo a Gigas</option>
+                                <option value="gigakilo">de Gigas a Kilo</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-4">
+                        	<div class="form-group">
+                              <label for="minutos">Minutos</label>
+                              <input type="text" class="form-control" id="minutos"  placeholder="Inserte valor">
+                              <select class="form-control" id="conversionMinutos" name="conversionMinutos">
+                                <option value="" disabled selected>Seleccione una opcion</option>
+              					<option value="minseg">de Minutos a Segundos</option>
+				      			<option value="segmin">de Segundos a Minutos</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                        </div>
+                        <p style="text-align:center;">
+                        <button type="button" class="btn btn-primary btn-lg active" onclick="convertirDyM()" name="button">Convertir</button>
+                        </p>
+                    </div>
+        		</div>
+            </div>
+        </div>
+    <!-- First Grid: Navegacion -->
+    <div class="container-fluid" id="navegacion">
+    </div>
+    <!-- First Grid: Llamadas -->
+    <div class="container-fluid" id="llamadas">
+  		<div class="row">
+        	<div class="panel-group">
+    			<div class="panel panel-primary">
+                	<div class="panel-heading">Llamadas</div>
+      				<div class="panel-body">
+                    <p>
+                    Cuando el usuario llama, ya sea porque no recibe o no puede realizar llamadas, realizar el siguiente paso a paso:
+					</p>
+                    <div class="list-group">
+  						<a href="#" class="list-group-item active">Paso a paso</a>
+  						<a href="#" class="list-group-item list-group-item-action">Verificar que la linea este activa</a>
+  						<a href="#" class="list-group-item list-group-item-action">Validar si el problema es de llamadas de entrada o salida</a>
+  						<a href="#" class="list-group-item list-group-item-action">Brindar codigos de restriccion o desvio</a>
+  						<a href="#" class="list-group-item list-group-item-action">Probar en otro equipo</a>
+                        <a href="#" class="list-group-item list-group-item-action">Escalar el caso</a>
+					</div>
+                    </div>
+                </div>
+            </div>
+    		<div class="col-xs-6">
+            	<iframe class="embed-responsive-item" src="http://172.16.24.70/ListasPositivasNegativas/Default.aspx" width="90%" height="100%"></iframe>
+            	<iframe class="embed-responsive-item" src="http://200.31.19.82/SRTM/indexJSP" width="90%" height="100%"></iframe>
+            </div>
+            <div class="col-xs-6">
+            	<div class="table-responsive">
+                <table class="table table-striped">
+  					<thead>
+                    	<tr>
+                        	<th>
+                            	Problema
+                            </th>
+                        	<th>
+                            	Descarte
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>
+                            	Buzon de Mensajes
+                            </td>
+                            <td>
+                            	Verificar que el IMEI no este bloqueado. Probar en otro equipo.
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>
+                            	Usuario no se encuentra disponible
+                            </td>
+                            <td>
+                            	Verificar que el IMEI no este bloqueado, codigos, linea PreActive
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>
+                            	Mal Enrutada
+                            </td>
+                            <td>
+                            	Linea portada, suena tururu o red no disponible
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>
+                            	Real Balance
+                            </td>
+                            <td>
+                            	Con saldo, dice  no tiene saldo o esta en mora.
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>
+                            	No salen llamadas
+                            </td>
+                            <td>
+                            	Validar que tenga el saldo, verificar marcado.
+                            </td>
+                        </tr>
+                    </tbody>
+				</table>
+                </div>
+            </div>
+  		</div>
+	</div>
+    <div class="row">
+    	<div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+  </body>
+</html>
