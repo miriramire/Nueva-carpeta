@@ -24,7 +24,7 @@
     <div class="container-fluid" id="inicio">
     	<div class="panel-group">
     		<div class="panel panel-primary">
-            	<div class="panel-heading">General</div>
+            	<div class="panel-heading"><h4>General <span class="glyphicon glyphicon-home"></span></h4></div>
       				<div class="panel-body">
                     	<p>El soporte técnico o asistencia técnica es un rango de servicios por medio del cual se proporciona asistencia a los usuarios al tener algún problema al utilizar un producto o servicio.</p>
                         <div class="row">
@@ -66,94 +66,110 @@
         		</div>
             </div>
         </div>
-    <!-- First Grid: Navegacion -->
+    <!-- Second Grid: Navegacion -->
     <div class="container-fluid" id="navegacion">
+    	<div class="panel panel-primary">
+        	<div class="panel-heading"><h4>Navegacion <span class="glyphicon glyphicon-cloud"></span></h4></div>
+        	<div class="panel-body">
+   			 	Panel content
+  			</div>
+  			<div class="panel-footer">Panel footer</div>
+        </div>
     </div>
-    <!-- First Grid: Llamadas -->
+    <!-- Third Grid: Llamadas -->
     <div class="container-fluid" id="llamadas">
-  		<div class="row">
-        	<div class="panel-group">
-    			<div class="panel panel-primary">
-                	<div class="panel-heading">Llamadas</div>
-      				<div class="panel-body">
-                    <p>
-                    Cuando el usuario llama, ya sea porque no recibe o no puede realizar llamadas, realizar el siguiente paso a paso:
-					</p>
-                    <div class="list-group">
-  						<a href="#" class="list-group-item active">Paso a paso</a>
-  						<a href="#" class="list-group-item list-group-item-action">Verificar que la linea este activa</a>
-  						<a href="#" class="list-group-item list-group-item-action">Validar si el problema es de llamadas de entrada o salida</a>
-  						<a href="#" class="list-group-item list-group-item-action">Brindar codigos de restriccion o desvio</a>
-  						<a href="#" class="list-group-item list-group-item-action">Probar en otro equipo</a>
-                        <a href="#" class="list-group-item list-group-item-action">Escalar el caso</a>
+        <div class="panel-group">
+            <div class="panel panel-primary">
+               	<div class="panel-heading"><h4>Llamadas <span class="glyphicon glyphicon-earphone"></span></h4></div>
+                <div class="panel-body">
+                	<p>Cuando el usuario llama, ya sea porque no recibe o no puede realizar llamadas, realizar el siguiente paso a paso:</p>
+                    <div class="row">
+  						<div class="col-md-6">
+                        	<div class="list-group">
+  								<a href="#" class="list-group-item active">Paso a paso</a>
+  								<a href="#" class="list-group-item list-group-item-action">Verificar que la linea este activa</a>
+  								<a href="#" class="list-group-item list-group-item-action">Validar si el problema es de llamadas de entrada o salida</a>
+  								<a href="#" class="list-group-item list-group-item-action">Brindar codigos de restriccion o desvio</a>
+  								<a href="#" class="list-group-item list-group-item-action">Probar en otro equipo</a>
+                        		<a href="#" class="list-group-item list-group-item-action">Escalar el caso</a>
+							</div>
+                        </div>
+  						<div class="col-md-6">
+                        	<div class="table-responsive">
+                          		<table class="table table-striped">
+                                  <thead>
+                                      <tr>
+                                          <th>
+                                              Problema
+                                          </th>
+                                          <th>
+                                              Descarte
+                                          </th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>
+                                              Buzon de Mensajes
+                                          </td>
+                                          <td>
+                                              Verificar que el IMEI no este bloqueado. Probar en otro equipo.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Usuario no se encuentra disponible
+                                          </td>
+                                          <td>
+                                              Verificar que el IMEI no este bloqueado, codigos, linea PreActive
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Mal Enrutada
+                                          </td>
+                                          <td>
+                                              Linea portada, suena tururu o red no disponible
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Real Balance
+                                          </td>
+                                          <td>
+                                              Con saldo, dice  no tiene saldo o esta en mora.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              No salen llamadas
+                                          </td>
+                                          <td>
+                                              Validar que tenga el saldo, verificar marcado.
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                        </div>
 					</div>
-                    </div>
+                    <div class="row">
+                      <div class="col-xs-6">
+                          <iframe class="embed-responsive-item" src="http://172.16.24.70/ListasPositivasNegativas/Default.aspx" width="90%" height="200px"></iframe>
+                      </div>
+                      <div class="col-xs-6">
+                          <iframe class="embed-responsive-item" src="http://200.31.19.82/SRTM/indexJSP" width="90%" height="200px"></iframe>
+                      </div>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                	<div class="alert alert-info">
+  						<strong>Nota!</strong> Dejar numero alterno.
+					</div>
                 </div>
             </div>
-    		<div class="col-xs-6">
-            	<iframe class="embed-responsive-item" src="http://172.16.24.70/ListasPositivasNegativas/Default.aspx" width="90%" height="100%"></iframe>
-            	<iframe class="embed-responsive-item" src="http://200.31.19.82/SRTM/indexJSP" width="90%" height="100%"></iframe>
-            </div>
-            <div class="col-xs-6">
-            	<div class="table-responsive">
-                <table class="table table-striped">
-  					<thead>
-                    	<tr>
-                        	<th>
-                            	Problema
-                            </th>
-                        	<th>
-                            	Descarte
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    	<tr>
-                        	<td>
-                            	Buzon de Mensajes
-                            </td>
-                            <td>
-                            	Verificar que el IMEI no este bloqueado. Probar en otro equipo.
-                            </td>
-                        </tr>
-                        <tr>
-                        	<td>
-                            	Usuario no se encuentra disponible
-                            </td>
-                            <td>
-                            	Verificar que el IMEI no este bloqueado, codigos, linea PreActive
-                            </td>
-                        </tr>
-                        <tr>
-                        	<td>
-                            	Mal Enrutada
-                            </td>
-                            <td>
-                            	Linea portada, suena tururu o red no disponible
-                            </td>
-                        </tr>
-                        <tr>
-                        	<td>
-                            	Real Balance
-                            </td>
-                            <td>
-                            	Con saldo, dice  no tiene saldo o esta en mora.
-                            </td>
-                        </tr>
-                        <tr>
-                        	<td>
-                            	No salen llamadas
-                            </td>
-                            <td>
-                            	Validar que tenga el saldo, verificar marcado.
-                            </td>
-                        </tr>
-                    </tbody>
-				</table>
-                </div>
-            </div>
-  		</div>
-	</div>
+         </div>
+    </div>
     <div class="row">
     	<div class="col-md-4">.col-md-4</div>
         <div class="col-md-4">.col-md-4</div>
