@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pagina de soporte</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
   </head>
   <body>
-    <nav class="navbar navbar-inverse bg-primary">
+    <!-- Menu de Navegacion -->
+    <nav class="navbar navbar-default navbar-static-top">
   		<div class="container-fluid">
     		<div class="navbar-header">
       			<a class="navbar-brand" href="#">Soporte Tecnico</a>
 		    </div>
-    		<ul class="nav navbar-nav">
-      			<li class="active"><a href="#inicio">Incio <span class="glyphicon glyphicon-home"></span></a></li>
-   				<li><a href="#navegacion">Navegacion <span class="glyphicon glyphicon-cloud-download"></span></a></li>
-   			    <li><a href="#llamadas">Llamadas <span class="glyphicon glyphicon-earphone"></span></a></li>
-      			<li><a href="#">Mensajes <span class="glyphicon glyphicon-envelope"></span></a></li>
+    		<ul class="nav nav-tabs nav-justified">
+          <li class="active"><a href="#inicio">Incio</a></li>
+   				<li><a href="#navegacion">Navegacion</a></li>
+          <li><a href="#llamadas">Llamadas</a></li>
+          <li><a href="#">Mensajes</a></li>
+          <li><a href="#">Consumos</a></li>
     		</ul>
   		</div>
 	</nav>
@@ -24,151 +28,244 @@
     <div class="container-fluid" id="inicio">
     	<div class="panel-group">
     		<div class="panel panel-primary">
-            	<div class="panel-heading"><h4>General <span class="glyphicon glyphicon-home"></span></h4></div>
-      				<div class="panel-body">
-                    	<p>El soporte técnico o asistencia técnica es un rango de servicios por medio del cual se proporciona asistencia a los usuarios al tener algún problema al utilizar un producto o servicio.</p>
-                        <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4">
-                          <div class="form-group">
-                              <label for="datos">Datos</label>
-                              <input type="text" class="form-control" id="datos" placeholder="Inserte valor">
-                              <select class="form-control" id="conversionDatos" name="conversionDatos">
-                                <option value="" disabled selected>Seleccione una opcion</option>
-                                <option value="kilomegas">de Kilo a Megas</option>
-                                <option value="megagiga">de Megas a Gigas</option>
-                                <option value="gigamega">de Gigas a Megas</option>
-                                <option value="megakilo">de Megas a Kilo</option>
-                                <option value="kilogiga">de Kilo a Gigas</option>
-                                <option value="gigakilo">de Gigas a Kilo</option>
-                              </select>
-                          </div>
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4">
-                        	<div class="form-group">
-                              <label for="minutos">Minutos</label>
-                              <input type="text" class="form-control" id="minutos"  placeholder="Inserte valor">
-                              <select class="form-control" id="conversionMinutos" name="conversionMinutos">
-                                <option value="" disabled selected>Seleccione una opcion</option>
-              					<option value="minseg">de Minutos a Segundos</option>
-				      			<option value="segmin">de Segundos a Minutos</option>
-                              </select>
-                          </div>
-                        </div>
-                        <div class="col-md-1"></div>
-                        </div>
-                        <p style="text-align:center;">
-                        <button type="button" class="btn btn-primary btn-lg active" onclick="convertirDyM()" name="button">Convertir</button>
-                        </p>
-                    </div>
-        		</div>
+          <div class="panel-heading"><h4>General</h4></div>
+          <div class="panel-body">
+            <p>El soporte técnico o asistencia técnica es un rango de servicios por medio del cual se proporciona asistencia a los usuarios al tener algún problema al utilizar un producto o servicio.</p>
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4">
+
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-1"></div>
+              <div class="col-md-4">
+                <form>
+                  <div class="form-group">
+                    <label for="ciudad">Selecciona la ciudad a la que deseas llamar:</label>
+                    <select class="form-control" id="ciudad">
+                      <option value="" disabled selected>Seleccione una opcion</option>
+                      <option>Arauca: <span class="badge">7</span></option>
+                      <option>Armenia: <span class="badge">6</span></option>
+                      <option>Barranquilla: <span class="badge">5</span></option>
+                      <option>Bogotá: <span class="badge">1</span></option>
+                      <option>Bucaramanga: <span class="badge">7</span></option>
+                      <option>Cali: <span class="badge">2</span></option>
+                      <option>Cartagena: <span class="badge">5</span></option>
+                      <option>Cúcuta: <span class="badge">7</span></option>
+                      <option>Florencia: <span class="badge">8</span></option>
+                      <option>Ibagué: <span class="badge">8</span></option>
+                      <option>Leticia: <span class="badge">8</span></option>
+                      <option>Manizales: <span class="badge">6</span></option>
+                      <option>Medellín: <span class="badge">4</span></option>
+                      <option>Mitú: <span class="badge">8</span></option>
+                      <option>Mocoa: <span class="badge">8</span></option>
+                      <option>Montería: <span class="badge">4</span></option>
+                      <option>Neiva: <span class="badge">8</span></option>
+                      <option>Pasto: <span class="badge">2</span></option>
+                      <option>Pereira: <span class="badge">6</span></option>
+                      <option>Popayán: <span class="badge">2</span></option>
+                      <option>Puerto Carreño: <span class="badge">8</span></option>
+                      <option>Puerto Inírida: <span class="badge">8</span></option>
+                      <option>Quibdó: <span class="badge">4</span></option>
+                      <option>Riohacha: <span class="badge">5</span></option>
+                      <option>San Andrés: <span class="badge">8</span></option>
+                      <option>San Andrés del Guaviare: <span class="badge">8</span></option>
+                      <option>Santa Marta: <span class="badge">5</span></option>
+                      <option>Sincelejo: <span class="badge">5</span></option>
+                      <option>Valledupar: <span class="badge">5</span></option>
+                      <option>Villavicencio: <span class="badge">8</span></option>
+                      <option>Tunja: <span class="badge">8</span></option>
+                      <option>Yopal: <span class="badge">8</span></option>
+                    </select>
+                    <input class="form-control" type="text" placeholder="Recurda marcar: 03 + Indicativo + Fijo" disabled>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-1"></div>
             </div>
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="datos">Datos</label>
+                  <input type="text" class="form-control" id="datos" placeholder="Inserte valor">
+                  <select class="form-control" id="conversionDatos" name="conversionDatos">
+                    <option value="" disabled selected>Seleccione una opcion</option>
+                    <option value="kilomegas">de Kilo a Megas</option>
+                    <option value="megagiga">de Megas a Gigas</option>
+                    <option value="gigamega">de Gigas a Megas</option>
+                    <option value="megakilo">de Megas a Kilo</option>
+                    <option value="kilogiga">de Kilo a Gigas</option>
+                    <option value="gigakilo">de Gigas a Kilo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-1"></div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="minutos">Minutos</label>
+                  <input type="text" class="form-control" id="minutos"  placeholder="Inserte valor">
+                  <select class="form-control" id="conversionMinutos" name="conversionMinutos">
+                    <option value="" disabled selected>Seleccione una opcion</option>
+                    <option value="minseg">de Minutos a Segundos</option>
+                    <option value="segmin">de Segundos a Minutos</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+            <p style="text-align:center;">
+              <button type="button" class="btn btn-primary btn-lg active" onclick="convertirDyM()" name="button">Convertir</button>
+            </p>
+          </div>
         </div>
+      </div>
+    </div>
     <!-- Second Grid: Navegacion -->
     <div class="container-fluid" id="navegacion">
     	<div class="panel panel-primary">
-        	<div class="panel-heading"><h4>Navegacion <span class="glyphicon glyphicon-cloud"></span></h4></div>
-        	<div class="panel-body">
-   			 	Panel content
+        <div class="panel-heading"><h4>Navegacion</h4></div>
+        <div class="panel-body">
+   			 	<p>Cuando el usuario se comunica con problemas de navegacion, ya sea que no navega o que navega lento, seguir el siguiente paso a paso:</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="list-group">
+                <a href="#" class="list-group-item active">Paso a paso</a>
+                <a href="#" class="list-group-item list-group-item-action">Verificar que tenga Datos</a>
+                <a href="#" class="list-group-item list-group-item-action">Verificar que tenga los datos encendidos</a>
+                <a href="#" class="list-group-item list-group-item-action">Configurar APN: movilexito.net.co</a>
+                <a href="#" class="list-group-item list-group-item-action">Configurar Modo de Red: GSM/WCDMA</a>
+                <a href="#" class="list-group-item list-group-item-action">Validar que el IMEI no se encuentre bloqueado</a>
+                <a href="#" class="list-group-item list-group-item-action">Probar en otro equipo</a>
+                <a href="#" class="list-group-item list-group-item-action">Escalar el caso</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h4>Informacion</h4>
+              <p>Este tipo de informacion puede ayudar cuando se esta realizando un descarte de problemas con la navegacion.</p>
+              <p>En la parte superior, cuando estan los datos encendidos, aparecen estas redes:</p>
+              <table class="table table-hover">
+                <tr>
+                  <th>Letra</th>
+                  <th>Red</th>
+                  <th>Velocidades</th>
+                </tr>
+                <tr>
+                  <td>G</td>
+                  <td>GPRS 2.5G</td>
+                  <td>56~114kbps</td>
+                </tr>
+                <tr>
+                  <td>E</td>
+                  <td>EDGE 2.8G</td>
+                  <td>400kbps</td>
+                </tr>
+                <tr>
+                  <td>H</td>
+                  <td>HSPA 3G+</td>
+                  <td>14.4Mbps</td>
+                </tr>
+                <tr>
+                  <td>H+</td>
+                  <td>HSPA+ 3.8G</td>
+                  <td>168Mbps</td>
+                </tr>
+                <tr>
+                  <td>LTE</td>
+                  <td>4G</td>
+                  <td>326,5Mbps</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-4">
+              <h4>Por que navegamos lento?</h4>
+              <p>Navegamos lento por muchas razones asociadas a distintos factores, que causan una navegacion lenta o que persivamos que no es tan rapida como queremos. Estos son algunos motivos:</p>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-info">Configuracion del equipo</li>
+                <li class="list-group-item list-group-item-info">Telefono no soporte la tecnologia</li>
+                <li class="list-group-item list-group-item-info">Muchas aplicaciones abiertas</li>
+                <li class="list-group-item list-group-item-info">Depende de la Infraestructura (Cobertura)</li>
+              </ul>
+            </div>
+          </div>
   			</div>
-  			<div class="panel-footer">Panel footer</div>
+  			<div class="panel-footer">
+          <div class="alert alert-info">
+            <strong>Nota!</strong> Dejar numero alterno.
+          </div>
         </div>
-    </div>
+        </div>
+      </div>
     <!-- Third Grid: Llamadas -->
     <div class="container-fluid" id="llamadas">
-        <div class="panel-group">
-            <div class="panel panel-primary">
-               	<div class="panel-heading"><h4>Llamadas <span class="glyphicon glyphicon-earphone"></span></h4></div>
-                <div class="panel-body">
-                	<p>Cuando el usuario llama, ya sea porque no recibe o no puede realizar llamadas, realizar el siguiente paso a paso:</p>
-                    <div class="row">
-  						<div class="col-md-6">
-                        	<div class="list-group">
-  								<a href="#" class="list-group-item active">Paso a paso</a>
+      <div class="panel-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading"><h4>Llamadas</h4></div>
+          <div class="panel-body">
+            <p>Cuando el usuario llama, ya sea porque no recibe o no puede realizar llamadas, realizar el siguiente paso a paso:</p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">Paso a paso</a>
   								<a href="#" class="list-group-item list-group-item-action">Verificar que la linea este activa</a>
   								<a href="#" class="list-group-item list-group-item-action">Validar si el problema es de llamadas de entrada o salida</a>
   								<a href="#" class="list-group-item list-group-item-action">Brindar codigos de restriccion o desvio</a>
   								<a href="#" class="list-group-item list-group-item-action">Probar en otro equipo</a>
-                        		<a href="#" class="list-group-item list-group-item-action">Escalar el caso</a>
-							</div>
-                        </div>
+                  <a href="#" class="list-group-item list-group-item-action">Escalar el caso</a>
+                </div>
+              </div>
   						<div class="col-md-6">
-                        	<div class="table-responsive">
-                          		<table class="table table-striped">
-                                  <thead>
-                                      <tr>
-                                          <th>
-                                              Problema
-                                          </th>
-                                          <th>
-                                              Descarte
-                                          </th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr>
-                                          <td>
-                                              Buzon de Mensajes
-                                          </td>
-                                          <td>
-                                              Verificar que el IMEI no este bloqueado. Probar en otro equipo.
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              Usuario no se encuentra disponible
-                                          </td>
-                                          <td>
-                                              Verificar que el IMEI no este bloqueado, codigos, linea PreActive
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              Mal Enrutada
-                                          </td>
-                                          <td>
-                                              Linea portada, suena tururu o red no disponible
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              Real Balance
-                                          </td>
-                                          <td>
-                                              Con saldo, dice  no tiene saldo o esta en mora.
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              No salen llamadas
-                                          </td>
-                                          <td>
-                                              Validar que tenga el saldo, verificar marcado.
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-                        </div>
-					</div>
-                    <div class="row">
-                      <div class="col-xs-6">
-                          <iframe class="embed-responsive-item" src="http://172.16.24.70/ListasPositivasNegativas/Default.aspx" width="90%" height="200px"></iframe>
-                      </div>
-                      <div class="col-xs-6">
-                          <iframe class="embed-responsive-item" src="http://200.31.19.82/SRTM/indexJSP" width="90%" height="200px"></iframe>
-                      </div>
-                  </div>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Problema</th>
+                        <th>Descarte</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Buzon de Mensajes</td>
+                        <td>Verificar que el IMEI no este bloqueado. Probar en otro equipo.</td>
+                      </tr>
+                      <tr>
+                        <td>Usuario no se encuentra disponible</td>
+                        <td>Verificar que el IMEI no este bloqueado, codigos, linea PreActive</td>
+                      </tr>
+                      <tr>
+                        <td>Mal Enrutada</td>
+                        <td>Linea portada, suena tururu o red no disponible</td>
+                      </tr>
+                      <tr>
+                        <td>Real Balance</td>
+                        <td>Con saldo, dice  no tiene saldo o esta en mora.</td>
+                      </tr>
+                      <tr>
+                        <td>No salen llamadas</td>
+                        <td>Validar que tenga el saldo, verificar marcado.</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div class="panel-footer">
-                	<div class="alert alert-info">
-  						<strong>Nota!</strong> Dejar numero alterno.
-					</div>
-                </div>
+              </div>
             </div>
-         </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <iframe class="embed-responsive-item" src="http://172.16.24.70/ListasPositivasNegativas/Default.aspx" width="100%" height="300px"></iframe>
+              </div>
+              <div class="col-xs-6">
+                <iframe class="embed-responsive-item" src="http://200.31.19.82/SRTM/indexJSP" width="100%" height="300px"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <div class="alert alert-info">
+              <strong>Nota!</strong> Dejar numero alterno.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="row">
     	<div class="col-md-4">.col-md-4</div>
