@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script type="text/javascript">
+		//Con esta funcion abrimos las paginas necesarias para el trabajo diario de un solo click
+		var windowObjectReference;
+		function abrirPaginas(){
+            windowObjectReference += window.open("https://rkdyncrm1.exito.redknee.com/Redknee/main.aspx");
+            windowObjectReference += window.open("http://201.234.71.55/Portaflow/indexJSP");
+            windowObjectReference += window.open("https://172.16.24.72/clifre/ClientesBackend/Inicio");
+            windowObjectReference += window.open("http://172.16.24.70/ListasPositivasNegativas/ListasNegativas/ConsultaEquiposHurtadosPerdidos.aspx");
+            windowObjectReference += window.open("http://200.31.19.82/SRTM/indexJSP");
+        }
+     </script>
   </head>
   <body>
     <!-- Menu de Navegacion -->
@@ -34,7 +45,12 @@
             <div class="row">
               <div class="col-md-1"></div>
               <div class="col-md-4">
-
+				<form>
+                  <div class="form-group">
+                    <label for="paginas">Presiona para abrir las paginas</label>
+                    <button type="button" class="btn btn-success" onclick="abrirPaginas()">Presiona Aqui</button>
+                  </div>
+                </form>
               </div>
               <div class="col-md-1"></div>
               <div class="col-md-1"></div>
@@ -190,18 +206,21 @@
             </div>
           </div>
   			</div>
-            <div class="row">
-            	<div class="col-md-4">
-                	<ul class="list-group">
-  						<li class="list-group-item">En Search busca la referencia del equipo</li>
-  						<li class="list-group-item">En NETWORK presiona Expand</li>
-  						<li class="list-group-item">En 4G bands busca 4(1700/2100)</li>
-                        <li class="list-group-item">Si no aparece es porque el equipo no soporta esta tecnologia.</li>
-                        <li class="list-group-item">No todas las referencias de equipos soportan 4G.</li>
-					</ul>
-                </div>
-                <div class="col-md-8">
-                	<iframe class="embed-responsive-item" src="http://www.gsmarena.com/" width="100%" height="300px"></iframe>
+            <div class="container">
+            	<h3>Consulta si el equipo esta homologado</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-group">
+                            <li class="list-group-item">En Search busca la referencia del equipo</li>
+                            <li class="list-group-item">En NETWORK presiona Expand</li>
+                            <li class="list-group-item">En 4G bands busca 4(1700/2100)</li>
+                            <li class="list-group-item">Si no aparece es porque el equipo no soporta esta tecnologia.</li>
+                            <li class="list-group-item">No todas las referencias de equipos soportan 4G.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <iframe class="embed-responsive-item" src="http://www.gsmarena.com/" width="100%" height="300px"></iframe>
+                    </div>
                 </div>
             </div>
   			<div class="panel-footer">
