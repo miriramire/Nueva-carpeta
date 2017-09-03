@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<title>Soporte Tecnico</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme-teal.css">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<style>
+body {font-family: "Roboto", sans-serif}
+.w3-bar-block .w3-bar-item{padding:16px;font-weight:bold}
+</style>
+<body>
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidebar">
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img src="images/movil-exito-logo.png" style="width:80%;" alt="Movil Exito"></a>
+  <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Cerrar <i class="fa fa-remove"></i></a>
+  <a class="w3-bar-item w3-button w3-teal" href="#">Inicio</a>
+  <a class="w3-bar-item w3-button" href="pages/llamadas.html">Llamadas</a>
+  <a class="w3-bar-item w3-button" href="pages/navegacion.html">Navegacion</a>
+  <a class="w3-bar-item w3-button" href="pages/cobertura.html">Cobertura</a>
+  <a class="w3-bar-item w3-button" href="#">Mensajes</a>
+  <a class="w3-bar-item w3-button" href="#">Consumos</a>
+  <div>
+    <a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">Mas<i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="w3-hide">
+      <a class="w3-bar-item w3-button" href="#">Cambio de titularidad</a>
+	  <a class="w3-bar-item w3-button" href="#">Selfcare</a>
+    </div>
+  </div>
+</nav>
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+
+<div id="myTop" class="w3-container w3-top w3-theme w3-large">
+  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+  <span id="myIntro" class="w3-hide">Soporte Técnico</span></p>
+</div>
+
+<header class="w3-container w3-theme w3-teal" style="padding:64px 32px">
+  <h1 class="w3-xxxlarge">Casos Técnicos</h1>
+</header>
+
+<div class="w3-container" style="padding:32px">
+
+<h2>Que es Soporte Técnico?</h2>
+
+<p>El soporte técnico o asistencia técnica es un rango de servicios por medio del cual se proporciona asistencia a los usuarios.</p>
+
+<ul class="w3-leftbar w3-theme-border" style="list-style:none">
+ <li>El soporte inicial es responsable de las incidencias básicas del cliente.</li>
+ <li>Reunir toda la información del cliente y determinar el problema.</li>
+ <li>Identificar qué es lo que el cliente está intentando realizar de forma que no se pierda tiempo “intentando resolver un síntoma el problema.”</li>
+ <li>Verificación de incidencias en las líneas físicas, validación de saldos, verificación de configuración apropiada de hardware y software y probar en otro equipo.</li>
+ <li>Escalar la incidencia a un nivel superior.</li>
+</ul>
+<br>
+<img src="images/dispositivos.jpg" style="width:100%" alt="Dispositivos">
+
+<hr>
+<header class="w3-container w3-teal">
+  <h1>Llamada telefónica</h1>
+</header>
+<div class="w3-container">
+  <p>Una llamada telefónica es la operación de puesta en conexión entre una persona con un teléfono y su destinatario.</p>
+</div>
+<hr>
+<header class="w3-container w3-teal">
+  <h1>Navegación por Internet</h1>
+</header>
+<div class="w3-container">
+  <p>La navegacion por Internet es la busqueda de informacion a traves de la web, usando aplicaciones o algun navegador en especifico</p>
+</div>
+<hr>
+<header class="w3-container w3-teal">
+  <h1>Mensaje de Texto</h1>
+</header>
+<div class="w3-container">
+  <p>Se entiende por mensaje de texto a aquel mensaje que se recibe entre dispositivos móviles (o más conocidos como celulares) de forma escrita.</p>
+</div>
+<hr>
+<footer class="w3-container w3-theme" style="padding:32px">
+  <p>Creado por Ricardo Ramirez</p>
+</footer>
+     
+</div>
+
+<script>
+// Open and close the sidebar on medium and small screens
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Change style of top container on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+        document.getElementById("myIntro").classList.add("w3-show-inline-block");
+    } else {
+        document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+        document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+    }
+}
+
+// Accordions
+function myAccordion(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme", "");
+    }
+}
+</script>
+     
+</body>
+</html> 

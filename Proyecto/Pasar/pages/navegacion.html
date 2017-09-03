@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<title>Soporte Tecnico</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Soporte<br>Tecnico</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#general" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">General</a> 
+    <a href="#informacion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Informacion</a> 
+    <a href="#escalamientos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Escalamientos</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contactos</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Soporte Tecnico</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="general">
+    <h1 class="w3-jumbo"><b>Navegacion</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>General.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row w3-center">
+	<div class="w3-col w3-container" style="width:20%"></div>
+	<div class="w3-col w3-container" style="width:60%">
+		<h2 class="w3-dark-grey">Descartes Basicos</h2>
+		<div class="w3-container w3-white">
+			<p>Cuando el usuario se comunica con problemas de navegacion, ya sea que no navega o que navega lento, seguir el siguiente paso a paso:</p>
+			<ul class="w3-ul">
+				<li class="w3-hover-red">Verificar que tenga Datos</li>
+				<li class="w3-hover-green">Verificar que tenga los datos encendidos</li>
+				<li class="w3-hover-blue">Configurar APN: movilexito.net.co</li>
+				<li class="w3-hover-black">Configurar Modo de Red: GSM/WCDMA</li>
+				<li class="w3-hover-red">Validar que el IMEI no se encuentre bloqueado</li>
+				<li class="w3-hover-green">Probar en otro equipo</li>
+				<li class="w3-hover-orange">Escalar el caso</li>
+			</ul>
+		</div>
+	</div>
+	<div class="w3-col w3-container" style="width:20%"></div>
+  </div>
+  <div class="w3-row-padding">
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Informacion -->
+  <div class="w3-container" id="informacion" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Informacion.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Este tipo de informacion puede ayudar cuando se esta realizando un descarte de problemas con la navegacion.</p>
+	<div class="w3-container">
+		<p>En la parte superior, cuando estan los datos encendidos, aparecen estas redes:</p>
+		
+		<table class="w3-table-all">
+			<thead>
+			  <tr class="w3-red">
+				<th>Letra</th>
+				<th>Red</th>
+				<th>Velocidades</th>
+			  </tr>
+			</thead>
+                <tr>
+                  <td>G</td>
+                  <td>GPRS 2.5G</td>
+                  <td>56~114kbps</td>
+                </tr>
+                <tr>
+                  <td>E</td>
+                  <td>EDGE 2.8G</td>
+                  <td>400kbps</td>
+                </tr>
+                <tr>
+                  <td>H</td>
+                  <td>HSPA 3G+</td>
+                  <td>14.4Mbps</td>
+                </tr>
+                <tr>
+                  <td>H+</td>
+                  <td>HSPA+ 3.8G</td>
+                  <td>168Mbps</td>
+                </tr>
+                <tr>
+                  <td>LTE</td>
+                  <td>4G</td>
+                  <td>326,5Mbps</td>
+                </tr>
+              </table>
+		<h3>Por que navegamos lento?</h3>
+		<p>Navegamos lento por muchas razones asociadas a distintos factores, que causan una navegacion lenta o que persivamos que no es tan rapida como queremos. Estos son algunos motivos:</p>
+		<ul class="w3-ul w3-hoverable">
+			<li>Configuracion del equipo</li>
+			<li>Telefono no soporte la tecnologia</li>
+			<li>Depende de la Infraestructura (Cobertura)</li>
+		</ul>
+		<h3>Consulta si el equipo esta homologado</h3>
+		<p>Buscar en la pagina http://www.gsmarena.com/</p>
+		<ul class="w3-ul w3-hoverable">
+			<li>En Search busca la referencia del equipo</li>
+            <li>En NETWORK presiona Expand</li>
+            <li>En 4G bands busca 4(1700/2100)</li>
+            <li>Si no aparece es porque el equipo no soporta esta tecnologia.</li>
+            <li>No todas las referencias de equipos soportan 4G.</li>
+		</ul>
+	</div>
+  </div>
+  
+  <!-- Escalamientos -->
+  <div class="w3-container" id="escalamientos" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Escalamientos.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Escalamiento a los proveedores</p>
+    <p>Los escalamientos con problemas de Navegacion se deben realizar a TIGO.</p>
+	<p>Para escalar a TIGO, se escala al correo electrónico Soporte.Mvno@TigoUne.com</p>
+    <p><b>Estos casos se escalan segun corresponda</b>:</p>
+	<div class="w3-container">
+		<p>Aqui encontraras el tipo de escalamientos</p>
+
+		<table class="w3-table-all">
+			<thead>
+			  <tr class="w3-red">
+				<th>Problema</th>
+				<th>Proveedor</th>
+				<th>Como se escala</th>
+			  </tr>
+			</thead>
+			<tr>
+			  <td>No navega</td>
+			  <td>TIGO</td>
+			  <td>Descripcion de los descartes realizados.</td>
+			</tr>
+			<tr>
+			  <td>Navegacion lenta</td>
+			  <td>TIGO</td>
+			  <td>Descripcion de los descartes realizados.</td>
+			</tr>
+			<tr>
+			  <td>No funciona alguna app</td>
+			  <td>TIGO</td>
+			  <td>Descripcion de los descartes realizados.</td>
+			</tr>
+		</table>
+	</div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-panel w3-blue w3-card-4">
+    <p>Nota: Dejar numero alterno!!</p>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contactos.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <div class="w3-container">
+	  <h2>Lista</h2>
+	  <p>Lista de contactos para mayor informacion:</p>
+	  <ul class="w3-ul w3-card-4">
+		<li class="w3-bar">
+		  <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+		  <img src="../images/tigo.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+		  <div class="w3-bar-item">
+			<span class="w3-large">MVNO</span><br>
+			<span>Soporte.Mvno@TigoUne.com</span><br>
+			<span>018000518200 codigo:<i>9003895084<i></span>
+		  </div>
+		</li>
+	  </ul>
+	</div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="../Proyecto.html" title="W3.CSS" target="_blank" class="w3-hover-opacity">soporte</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
